@@ -1,0 +1,18 @@
+{
+  "CONTRACT_ADDRESS": "0x00000",
+  "SCAN_LINK": "https://polygonscan.com/token/",
+  "NETWORK": {
+    "NAME": "Polygon",
+    "SYMBOL": "Matic",
+    "ID": 137
+  },
+  "NFT_NAME": "Cosmoapiens Degen",
+  "SYMBOL": "COSPIEN DEGEN",
+  "MAX_SUPPLY": 10000,
+  "WEI_COST": 75000000000000000,
+  "DISPLAY_COST": 0.075,
+  "GAS_LIMIT": 285000,
+  "MARKETPLACE": "Opeansea",
+  "MARKETPLACE_LINK": "https://opensea.io/",
+  "SHOW_BACKGROUND": true
+}
