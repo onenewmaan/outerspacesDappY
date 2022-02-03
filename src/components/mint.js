@@ -42,7 +42,7 @@ export function Mint() {
     setFeedback(`Minting your ${CONFIG.NFT_NAME}...`);
     setClaimingNft(true);
     blockchain.smartContract.methods
-      .mint(mintAmount)
+      .mint(blockchain.account, mintAmount)
       .send({
         gasLimit: String(totalGasLimit),
         to: CONFIG.CONTRACT_ADDRESS,
@@ -51,7 +51,7 @@ export function Mint() {
       })
       .once("error", (err) => {
         console.log(err);
-        setFeedback("Sorry, something went wrong please try again later.");
+        setFeedback("Hmmm, seems like the chain needs more time to proccess...");
         setClaimingNft(false);
       })
       .then((receipt) => {
@@ -112,7 +112,6 @@ export function Mint() {
           
         <div className='token__section'>
           <div className='token__wrapper'>
-          <p className="bottom-space-sm" />
             <div className="token__container-card">
               <div className="token__container-cardInfo">
                 <div className='row' style={{display:'flex'}}>
@@ -120,69 +119,49 @@ export function Mint() {
                     <div className="neon">SAPIENS </div>
                 </div>
                 <div className="row">
-                <h3 className="neon" style={{fontSize: '25px', fontFamily: 'neon', textAlign:'start'}}>
-                        YOGI
-                    </h3>
+                
                 </div>
                 <div className='row' style={{display:'flex', flexDirection:'column'}}>
-
-            <div className="img-zoom">
-                <div className="w">
-                  <div className="warhol a"></div>
-                  <div className="warhol b"></div>
-                  <div className="warhol c"></div>
-                  <div className="warhol d"></div>
-              </div>
-              </div>
+                <div className="token__container">
+                    <div className='token__container-section' >
+                      
+                      
+                    </div>
+                  </div>
             </div>
-            <p className="bottom-space-sm" />
+            <div className='float-div'>
+                      <h3>︾</h3>
+                      </div>
+                      
             <div className="token__container">
                     <div className='token__container-section' >
-                      <h2 style={{display: 'flex',fontSize: '14px', textAlign: 'center'}}>
-                      Your passport to the sickest clubhouse on the blockchained metaverse. 
-                      All Cosmosapiens NFT holders will receive an early-bird status with early investor privileges and NFT giveaways,
-                      access to our metaverse virtual Cosmosapiens PODs, in-house designed Cosmosapiens NFT singed
-                      on Ethereum Blockchain and hosted on the distributed database.
-                      <br />
-                      <br />
-                      Cosmosapiens are the frame avatars and are the result of hand-drawn & code work, 
-                      each is unique and programmatically generated from over 150+ possible traits, 
-                      including expression, headwear, clothing, and more. 
-                      All cosmosapiens are dope, but some are rarer than others. 
-                      The cosmosapiens are stored as ERC-721 tokens on the blockchain and hosted on IPFS. 
-                      Purchasing a cosmosapien costs 0.05 ETH.
-                      To access members-only areas such as THE Cosmosapiens, 
-                      Cosmosapiens will need to be signed into their Metamask Wallet.
-                      </h2>
+                      <div className="row">
+                        <div className="col">
+                          <img src="images/example.gif" width="110px" alt="" style={{margin:'-15px', transform: "scaleX(-1)"}} />
+                        </div>
+                        <div className="col">
+                        <h3 className="neon" style={{fontSize: '25px', fontFamily: 'neon', textAlign:'center'}}>
+                        YOGI + ELFI
+                    </h3>
+                          <h2 style={{display: 'flex',fontSize: '14px', textAlign: 'center'}}>
+                          Cosmosapiens Yogies and Elfies are the game frame avatars - are the result of human imagination + hand-drawn & code work, 
+                          each is unique and programmatically generated from over 50+ possible traits, 
+                          including expression, headwear and more imporantly their location in space & time...</h2>
+                        </div>
+                        <div className="col">
+                          <img src="images/example2.gif" width="110px" alt="" style={{margin:'-15px'}} />
+                        </div>
+                      </div>
                     </div>
                   </div>
-                <p className="bottom-space-sm" />
-                  <h3 style={{display: 'flex',fontSize: '17px', textAlign: 'center', letterSpacing:'3px'}}><b>The Game Avatar</b></h3>
-            <div className="token__container">
-                    <div className='token__container-section' >
-                      <h2 style={{display: 'flex',fontSize: '14px', textAlign: 'center'}}>
-                      Drought, dropped oxygen levels and crop disease made Earth no longer a suitable home.
-                    Earth's civilization starts to regress into a failing society, humanity is facing extinction.
-                    Our only way out is up.An unknown inteligence opened up a wormhole in our near approximity.
-                    A space-time bridge leading to distant galaxies - our last chance to find a habitable exoplanet.
-                    A flock of human embryos called the cosmosapiens are sent on a exploratory mission through the wormhole 
-                    in search of a new home.
-                      </h2>
-                    </div>
-                  </div>
-                <p className="bottom-space-sm" />
                   <div className="token__container">
                   <div className="token__wrapper">
-                  <h2 style={{marginBottom:'-15px'}}>♛</h2>
                       <img src='images/web/polygon.png'  width="150px" style={{margin:'15px'}} alt=''  />
-                    <img src='images/web/crows.gif'  width="500px" style={{padding:'1px', opacity:'0.75'}} alt=''  />
-
                     </div>
                   </div>
               <div className='row'>
-                
-                <a href={'https://etherscan.io/token/0xDD9Be29403fd0Ef9cE4fFA1a1C824d430d25B323'}>
-                  <h3 style={{fontSize: '15px', margin: '0px 0px 0px 0px', opacity:1}}>contract</h3>
+                <a href={'https://polygonscan.com/token/0xFc0134960C5B1799726179A9C5540A615e63ED8a'}>
+                  <h3 style={{fontSize: '15px', margin: '0px 0px 0px 0px', opacity:1}}>/0xFc0134960C5B1799726179A9C5540A615e63ED8a</h3>
                 </a>
               </div>
               <div className="row" style={{flexFlow: 'row', alignItems:'center'}}>
@@ -219,10 +198,9 @@ export function Mint() {
                 <>
                   <div className='token__wrapper'>
                    <h3> 1 {CONFIG.SYMBOL} costs {CONFIG.DISPLAY_COST}{" "}{CONFIG.NETWORK.SYMBOL} </h3>
-                   <h3 style={{margin:'5px'}}>excluding gas fees.</h3>
-                   <h3 style={{fontSize: '10px'}}><i>*price doubles with each 100 sold</i></h3>
+                   
+                   <h3 style={{margin:'5px'}}>✰ optimized gas fees ✰</h3>
                   </div>
-                  <p className="bottom-space-xsm" />
                   {blockchain.account === "" ||
                   blockchain.smartContract === null ? (
                     <div className='token__wrapper'>
@@ -310,15 +288,17 @@ export function Mint() {
                   Verify that you are connected to the right network (
                   {CONFIG.NETWORK.NAME} Mainnet) and the correct address.
                 </h3>
+              <div className="bottom-space-sm" />
+
                 <p style={{alignItems:'center'}}>
                   <img src='images/web/blue_check.png'  width="15px" style={{marginBottom:'-3px'}} alt=''  />
                   &emsp;Check us out:
                 </p>
-                <div className="img-zoom">
+              <div className="bottom-space-sm" />
+
                 <a href={'https://opensea.io/collection/cosmosapiens'}>
-                  <img src='images/web/opensea.png'  width="250px" style={{margin:'0px'}} alt=''  />
+                  <img src='images/web/opensea.png'  width="150px" style={{margin:'0px'}} alt=''  />
                 </a>
-                </div>
               </div>
  
               <div className="bottom-space-sm" />

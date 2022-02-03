@@ -1,18 +1,18 @@
 {
-  "CONTRACT_ADDRESS": "0x00000",
-  "SCAN_LINK": "https://polygonscan.com/token/",
+  "CONTRACT_ADDRESS": "0xFc0134960C5B1799726179A9C5540A615e63ED8a",
+  "SCAN_LINK": "https://polygonscan.com/token/0xFc0134960C5B1799726179A9C5540A615e63ED8a",
   "NETWORK": {
     "NAME": "Polygon",
     "SYMBOL": "Matic",
     "ID": 137
   },
-  "NFT_NAME": "Cosmoapiens Degen",
-  "SYMBOL": "COSPIEN DEGEN",
-  "MAX_SUPPLY": 10000,
+  "NFT_NAME": "Cosmoapiens Yogi",
+  "SYMBOL": "CYG",
+  "MAX_SUPPLY": 1000,
   "WEI_COST": 75000000000000000,
-  "DISPLAY_COST": 0.075,
+  "DISPLAY_COST": 5,
   "GAS_LIMIT": 285000,
   "MARKETPLACE": "Opeansea",
-  "MARKETPLACE_LINK": "https://opensea.io/",
+  "MARKETPLACE_LINK": "https://opensea.io/collection/cosmosapiensyogi",
   "SHOW_BACKGROUND": true
 }

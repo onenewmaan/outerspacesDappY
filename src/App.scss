@@ -5,10 +5,10 @@
   body,
   #root {
     width: 100%;
-    height: 100%;
+    height: 1200px;
     margin: 0;
     padding: 0;
-    overflow-x: auto;
+    overflow-x: unset;
     background-color: rgba(0, 0, 0, 0.309);
   }
   @media screen and (min-width: 600px)  {
@@ -41,7 +41,7 @@
     
   }
   h1, h2, h3 {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: monospace;
     font-weight: 100;
     text-align: center;
     color: whitesmoke;
@@ -230,9 +230,9 @@
     border: 1px solid rgb(146, 148, 248);
     position: relative;
     overflow: hidden;
-    border-radius: 5px;
-    font-size: 1.25rem;
-    min-height: 30px;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    height: 45px;
     padding:  0.5rem 7rem; 
     margin: 10px;
     color: #f4f4f4;
@@ -1119,7 +1119,7 @@
   #stars2:after {
     content: '';
     position: absolute;
-    top: 2000px;
+    top: 1000px;
     width: 2px;
     height: 2px;
     background: transparent;
@@ -1212,7 +1212,7 @@
   #stars3:after {
     content: '';
     position: absolute;
-    top: 2000px;
+    top: 1000px;
     width: 3px;
     height: 3px;
     background: transparent;
