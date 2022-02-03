@@ -51,7 +51,7 @@ export function Mint() {
       })
       .once("error", (err) => {
         console.log(err);
-        setFeedback("Hmmm, seems there was a problem, try again later or get in touch with our team..");
+        setFeedback("Hmmm, what's taking so long, check polygonscan, nfts should be on their way..");
         setClaimingNft(false);
       })
       .then((receipt) => {
