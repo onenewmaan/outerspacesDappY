@@ -42,7 +42,7 @@ export function Mint() {
     setFeedback(`Minting your ${CONFIG.NFT_NAME}...`);
     setClaimingNft(true);
     blockchain.smartContract.methods
-      .mint(blockchain.account, mintAmount)
+      .mint(mintAmount)
       .send({
         gasLimit: String(totalGasLimit),
         to: CONFIG.CONTRACT_ADDRESS,
@@ -51,7 +51,7 @@ export function Mint() {
       })
       .once("error", (err) => {
         console.log(err);
-        setFeedback("Hmmm, seems like the chain needs more time to proccess...");
+        setFeedback("Hmmm, seems there was a problem, try again later or get in touch with our team..");
         setClaimingNft(false);
       })
       .then((receipt) => {
@@ -161,7 +161,7 @@ export function Mint() {
                   </div>
               <div className='row'>
                 <a href={'https://polygonscan.com/token/0xFc0134960C5B1799726179A9C5540A615e63ED8a'}>
-                  <h3 style={{fontSize: '15px', margin: '0px 0px 0px 0px', opacity:1}}>/0xFc0134960C5B1799726179A9C5540A615e63ED8a</h3>
+                  <h3 style={{fontSize: '15px', margin: '0px 0px 0px 0px', opacity:1}}>0xFc0134960C5B1799726179A9C5540A615e63ED8a</h3>
                 </a>
               </div>
               <div className="row" style={{flexFlow: 'row', alignItems:'center'}}>
