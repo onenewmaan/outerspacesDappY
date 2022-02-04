@@ -109,6 +109,7 @@ export function Mint() {
 
   return (
       <div className='container'>
+        <p className="bottom-space" />
           
         <div className='token__section'>
           <div className='token__wrapper'>
@@ -301,7 +302,7 @@ export function Mint() {
                 </a>
               </div>
  
-              <div className="bottom-space-sm" />
+              <div className="bottom-space-md" />
               <div className='row' style={{flexFlow:'column'}}>
                       <h2 style={{fontSize: '25px', fontWeight: '500', textAlign: 'center', letterSpacing:'8px'}}>
                       JOIN OUR COMMUNITY 
@@ -315,6 +316,7 @@ export function Mint() {
                     </div>
             </div>
           </div>
+          <div className="bottom-space-md" />
           
         </div>
       </div>
