@@ -297,7 +297,7 @@ export function Mint() {
                 </p>
               <div className="bottom-space-sm" />
 
-                <a href={'https://opensea.io/collection/cosmosapiens'}>
+                <a href={'https://opensea.io/collection/cosmosapiensyogi'}>
                   <img src='images/web/opensea.png'  width="150px" style={{margin:'0px'}} alt=''  />
                 </a>
               </div>
