@@ -5,7 +5,7 @@
   body,
   #root {
     width: 100%;
-    height: 1200px;
+    height: fit-content;
     margin: 0;
     padding: 0;
     overflow-x: unset;
@@ -1212,7 +1212,7 @@
   #stars3:after {
     content: '';
     position: absolute;
-    top: 1000px;
+    top: 50px;
     width: 3px;
     height: 3px;
     background: transparent;
@@ -1238,10 +1238,10 @@
     407px 1139px #fff, 950px 1400px #fff, 922px 1139px #fff, 1697px 293px #fff,
     1238px 1281px #fff, 1038px 1197px #fff, 376px 1889px #fff,
     1255px 1680px #fff, 1008px 1316px #fff, 1538px 1447px #fff,
-    1186px 874px #fff, 1967px 640px #fff, 1341px 19px #fff, 29px 1732px #fff,
+    1186px 874px #fff, 1967px 640px #fff, 1341px 19px #fff,
     16px 1650px #fff, 1021px 1075px #fff, 723px 424px #fff, 1175px 41px #fff,
-    494px 1957px #fff, 1296px 431px #fff, 175px 1507px #fff, 831px 121px #fff,
-    498px 1947px #fff, 617px 880px #fff, 240px 403px #fff;
+    1296px 431px #fff, 175px 1507px #fff, 831px 121px #fff,
+   617px 880px #fff, 240px 403px #fff;
   }
   
   
@@ -1250,6 +1250,6 @@
         transform: translateY(0px);
     }
     to {
-        transform: translateY(-2000px);
+        transform: translateY(-1500px);
     }
   }
